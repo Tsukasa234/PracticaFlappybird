@@ -2,3 +2,6 @@
 *.meta
 *.log
 *.log
+FloppyBard/Temp/UnityLockfile
+FloppyBard/Library/GridBrush/UnityEditor.Tilemaps.GridBrush.asset
+FloppyBard/Library/EditorInstance.json
