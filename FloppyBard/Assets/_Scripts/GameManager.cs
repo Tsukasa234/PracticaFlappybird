@@ -29,18 +29,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && isGameOver)
-        {
-            RestartGame();
-        }
-    }
 
     public void GameOver()
     {
         isGameOver = true;
         gameOverText.SetActive(true);
+    }
+
+    public void ButtonRestarGame()
+    {
+        RestartGame();
     }
 
     private void RestartGame()
@@ -52,5 +50,11 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+    }
+    public void CargarSiguienteNivel()
+    {
+        int escenaActual = SceneManager.GetActiveScene().buildIndex;
+        int siguienteIndex = ++escenaActual;
+        SceneManager.LoadScene(siguienteIndex);
     }
 }
